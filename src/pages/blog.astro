@@ -1,7 +1,6 @@
 ---
 import { settings } from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
-import Cta from "@/layouts/components/Cta.astro";
 import Pagination from "@/layouts/components/Pagination.astro";
 import Post from "@/layouts/partials/Post.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
@@ -22,37 +21,20 @@ const totalPages = Math.ceil(posts.length / settings.pagination);
 ---
 
 <Base>
-  <!-- Banner -->
-  <section
-    class="banner bg-stone-100"
-  >
+  <!-- Blogs -->
+  <div class="section">
     <div class="container">
-      <div class="row items-center">
-        <div class="md:col-6 mb-20 md:mb-0">
-          {
-            banner?.title && (
-              <h1 set:html={markdownify(banner?.title)} class="lg:text-6xl uppercase mb-8" />
-							<a href="/about" class="btn btn-secondary">Learn more</a>
-            )
-          }
+      <div class="row px-3">
+        <div class="mx-auto px-0 lg:col-8">
+            {
+              sortPostByDate
+                .slice(0, settings.pagination)
+                .map((post) => <Post post={post} />)
+            }
+            <Pagination currentPage={1} totalPages={totalPages} />
         </div>
-				<div class="md:col-6">
-					{
-						banner?.image && (
-							<Image
-								class="rounded-lg"
-								src={banner?.image}
-								width={768}
-								height={385}
-								alt=""
-							/>
-						)
-					}
-				</div>
       </div>
     </div>
-  </section>
-  <!-- /End Banner -->
-
-  <!-- <Cta cta={call_to_action} /> -->
+  </div>
+  <!-- /End Blogs -->
 </Base>

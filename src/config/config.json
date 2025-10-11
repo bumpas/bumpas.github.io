@@ -1,0 +1,29 @@
+{
+  "site": {
+    "title": "Bumpas",
+    "base_url": "https://bumpas.github.io",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_width": "197",
+    "logo_height": "55",
+    "logo_text": "Bumpas"
+  },
+
+  "settings": {
+    "pagination": 5,
+    "summary_length": 140
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "© 2025 Bumpas"
+  },
+
+  "metadata": {
+    "meta_author": "Bumpas",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Personal blog of bumpas"
+  }
+}

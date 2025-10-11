@@ -1,0 +1,86 @@
+---
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+
+const entry = (await getEntry(
+  "contact",
+  "-index"
+)) as CollectionEntry<"contact">;
+const { contact_form_action } = config.params;
+const { title, image, content } = entry.data;
+---
+
+<Base title={title} image={image}>
+  <section class="section pb-0">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-4">
+          {title && <h1 set:html={markdownify(title)} class="h1 mb-12 uppercase" />}
+          {content && <p set:html={markdownify(content)} />}
+          <!-- <form
+            class="contact-form mt-6"
+            method="POST"
+            action={contact_form_action}
+          >
+            <div class="row">
+              <div class="mb-4 lg:col-6">
+                <input
+                  class="form-input w-full"
+                  name="name"
+                  placeholder="Name"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="mb-4 lg:col-6">
+                <input
+                  class="form-input w-full"
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="mb-4">
+              <input
+                class="form-input w-full"
+                name="subject"
+                type="text"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <textarea
+                class="form-textarea w-full"
+                placeholder="Type Your Message Here"
+                rows="7"></textarea>
+            </div>
+            <button class="btn btn-primary block w-full">Submit Now</button>
+          </form> -->
+        </div>
+        <div class="mt-6 lg:col-8 lg:mt-0">
+          <!-- {
+            image && (
+              <Image
+                class="w-full"
+                src={image}
+                width={540}
+                height={515}
+                alt=""
+              />
+            )
+          } -->
+          <!-- Google Calendar Appointment Scheduling begin -->
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2imaZlgw36uejCCgx9jlLFGVaUOScxmX5bokgMNQly_oPnEWVusE3jHQ4uHpFhU2S6vDKA-3kX?gv=true" style="border: 0" width="100%" height="1200" frameborder="0"></iframe>
+          <!-- end Google Calendar Appointment Scheduling -->
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
