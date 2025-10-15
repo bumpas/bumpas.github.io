@@ -1,6 +1,8 @@
-<h1 align=center>Northendlab Light Astro</h1>
-<p align=center>Northendlab is a beautifully designed & highly customizable Astro theme created specifically for personal blog websites. Users can customize the color scheme, fonts, menu, social links, etc. and update the content easily based on their requirements.  
-</p>
+<h1 align="center">Bumpas portfolio and blog</h1>
+<p align="center">Astro and modified theme from Northendlab. Added a small photography page to display a few selects.</p>
+
+---
+
 <h2 align="center"> <a target="_blank" href="https://northendlab-light-astro.vercel.app/" rel="nofollow">👀Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fnorthendlab-light-astro.vercel.app%2F&form_factor=desktop">Page Speed (100%)🚀</a>
 </h2>
 
@@ -83,26 +85,3 @@ After finishing all the customization, you can create a production build by runn
 ```
 npm run build
 ```
-
-<!-- reporting issue -->
-
-## 🐞Reporting Issues
-
-We use GitHub Issues as the official bug tracker for this Template. Please Search [existing issues](https://github.com/themefisher/northendlab-light-astro/issues). It’s possible someone has already reported the same problem.
-If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/themefisher/northendlab-light-astro/issues).
-
-<!-- licence -->
-
-## 📄License
-
-Copyright (c) 2023 - Present, Designed & Developed by [Themefisher](https://themefisher.com)
-
-**Code License:** Released under the [MIT](https://github.com/themefisher/northendlab-light-astro/blob/main/LICENSE) license.
-
-**Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.
-
-## 👨‍💻Need Custom Development Services?
-
-Besides developing beautifully designed and blazing-fast themes, we help businesses create fast, performance-focused, scalable & secure websites based on NextJs, Hugo, Astro, etc.
-
-If you need a custom theme, theme customization, or complete website development services from scratch you can [Hire Us](https://themefisher.com/contact).
