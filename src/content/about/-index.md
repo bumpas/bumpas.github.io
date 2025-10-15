@@ -11,10 +11,9 @@ banner:
 
 ---
 
-### Senior Front-End Engineer
-
-Remote / Colorado <br>
-bumpas@andrewbumpas.com | 970.819.4888  
+### Senior Front-End Engineer 
+Remote / Colorado  
+📧 bumpas@andrewbumpas.com | 📞 970.819.4888  
 
 ---
 
@@ -37,13 +36,14 @@ As a seasoned front-end engineer with over 15 years of ecommerce and digital dev
 ---
 
 ### Core Strengths
-- 15+ years of front-end development and ecommerce experience across enterprise and startup environments.  
-- Expertise in front-end architecture, CMS integration (Contentstack), performance optimization, and design system implementation.  
-- Strong advocate for accessibility, maintainable, simple code and collaborative product development.
-- Web best practices and modern design patterns  
-- Cross-functional collaboration and creative problem-solving  
+
+- 15+ years of front-end development and ecommerce experience across enterprise and startup environments  
+- Expertise in front-end architecture, CMS integration (Contentstack), performance optimization, and design system implementation  
+- Strong advocate for accessibility, maintainable code, and collaborative product development  
+- Deep understanding of web best practices and modern design patterns  
+- Skilled in cross-functional collaboration and creative problem-solving  
 - Strong attention to detail and organizational skills  
-- Adaptability in fast-paced, evolving environments  
+- Adaptable in fast-paced, evolving environments  
 - Empathy-driven leadership and mentoring  
 
 ---
@@ -55,24 +55,23 @@ As a seasoned front-end engineer with over 15 years of ecommerce and digital dev
 Remote / Broomfield, CO
 
 **Sr. Manager, Digital Development**  
-*Apr 2024 – Sep 2025*
-
+*Apr 2024 – Sep 2025*  
 - Led front-end engineering and design system initiatives across Crocs’ global ecommerce platform.  
 - Oversaw front-end architecture and performance optimization spanning multiple regional storefronts.  
 - Partnered with UX and product teams to deliver a unified design system that improved consistency and developer efficiency.  
-- Mentored developers, established coding standards, and championed accessibility-first, simple and collaborative development practices.
+- Mentored developers, established coding standards, and championed accessibility-first, simple, and collaborative development practices.  
 
 **Manager, Digital Development (Front-End & Design System)**  
 *Sep 2023 – Jun 2024*  
 - Directed the front-end roadmap, design system evolution, and implementation across Crocs’ SFCC sites.  
 - Built frameworks for reusability and scalability, reducing design-to-development friction.  
-- Fostered strong collaboration between creative, UX, and engineering teams through shared tooling and processes.
+- Fostered strong collaboration between creative, UX, and engineering teams through shared tooling and processes.  
 
 **Sr. Digital Developer, SFCC**  
 *Sep 2021 – Mar 2024*  
 - Developed and maintained key front-end components and integrations within Salesforce Commerce Cloud (SFCC).  
 - Enhanced site performance, accessibility, and scalability through modernized front-end architecture.  
-- Partnered with global teams to ensure feature parity and consistency across multiple regional platforms.
+- Partnered with global teams to ensure feature parity and consistency across regional platforms.  
 
 **Digital Developer, SFCC**  
 *Apr 2020 – Sep 2021*  
@@ -89,33 +88,28 @@ Fort Collins, CO
 
 **Web Developer**  
 *Oct 2017 – Apr 2020*  
-
 - Developed and maintained high-traffic ecommerce experiences for OtterBox and LifeProof brands, ensuring consistency and performance across global sites.  
 - Built and maintained reusable pattern libraries and front-end components to improve scalability, maintainability, and design consistency.  
 - Collaborated with UX, design, and marketing teams to deliver engaging, conversion-focused digital experiences aligned with brand and accessibility standards.  
-- Optimized site performance and implemented accessibility improvements using modern web best practices (HTML5, CSS3/SASS, JavaScript).
-
+- Optimized site performance and implemented accessibility improvements using modern web best practices (HTML5, CSS3/SASS, JavaScript).  
 
 **Front-End Developer**  
-*Aug 2014 – Nov 2015*
-
+*Aug 2014 – Nov 2015*  
 - Spearheaded pattern library development for OtterBox.com and LifeProof.com, promoting reusability and maintainability.  
 - Developed clean, semantic code for Demandware (SFCC) ecommerce sites with a focus on scalability and performance.  
-- Advocated for front-end best practices and supported the integration of new UX patterns.
+- Advocated for front-end best practices and supported the integration of new UX patterns.  
 
 **UX/UI Designer**  
 *Mar 2013 – Nov 2015*  
-
-- Led UX and UI strategy for OtterBox.com, optimizing for user experience and conversion.  
+- Led UX and UI strategy for OtterBox.com, optimizing user experience and conversion.  
 - Created wireframes, prototypes, and process flows to refine user journeys.  
-- Designed, implemented, and analyzed A/B and multivariate tests to optimize user engagement and conversion performance.
+- Designed, implemented, and analyzed A/B and multivariate tests to optimize user engagement and conversion performance.  
 
 **Web Designer / Content Specialist**  
 *Mar 2009 – Mar 2013*  
-
 - Developed responsive homepages, landing pages, and marketing experiences with a focus on performance, accessibility, and brand consistency.  
 - Managed and updated product content on the Demandware (SFCC) platform, ensuring accuracy and timely campaign execution.  
-- Collaborated cross-functionally with marketing, design, and development teams to plan and launch seasonal and promotional campaigns. 
+- Collaborated cross-functionally with marketing, design, and development teams to plan and launch seasonal and promotional campaigns.  
 
 ---
 
@@ -123,34 +117,29 @@ Fort Collins, CO
 
 Steamboat Springs, CO
 
-**Composing Artist**
-*Dec 2005 –  Feb 2009*
-
-- Created print graphics, for nightly news print with editorial and marketing reps based on specs from clients
+**Composing Artist**  
+*Dec 2005 – Feb 2009*  
+- Created print graphics for nightly news publications in collaboration with editorial and marketing teams, ensuring accuracy and visual impact.  
 
 ---
 
-<h4 className='mb-0'>Mountain Resorts</h4>
+<h4 className="mb-0">Mountain Resorts</h4>
 
 Steamboat Springs, CO
 
 **Creative Assistant Web Developer**  
 *Nov 2006 – May 2007*  
-
 - Assisted in redesigning company web pages using XHTML, CSS, and JavaScript.  
-- Designed and implemented Flash slideshows and banners to improve site interactivity and engagement.
-- Product photography of rental listings and properties
+- Designed and implemented Flash slideshows and banners to improve site interactivity and engagement.  
+- Captured product photography for rental listings and property marketing.  
 
 ---
 
 ### Education
 
-**Associate of Science in Digital Media** <br> 
-Full Sail University, Winter Park, FL
+**Associate of Science in Digital Media**  
+Full Sail University — Winter Park, FL  
 
 ---
 
-*References available upon request.*
-
-
----  
+*References available upon request.*  
