@@ -103,6 +103,7 @@ const currentPath = Astro.url.pathname;
           href="/search"
         >
           <IoSearch />
+          <span class="sr-only">Search</span>
         </a>
       </li>
     </ul>
@@ -112,12 +113,15 @@ const currentPath = Astro.url.pathname;
 <script>
   document.addEventListener("astro:page-load", () => {
     const header = document.querySelector(".header") as HTMLElement;
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        header.classList.add("header-sticky");
-      } else {
-        header.classList.remove("header-sticky");
-      }
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > 100) { // Scrolling down and past a threshold
+            header.classList.add('-translate-y-full'); // Hide header
+        } else if (window.scrollY < lastScrollY) { // Scrolling up
+            header.classList.remove('-translate-y-full'); // Show header
+        }
+        lastScrollY = window.scrollY;
     });
   });
 </script>

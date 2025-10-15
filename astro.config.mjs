@@ -54,4 +54,7 @@ export default defineConfig({
     extendDefaultPlugins: true,
     highlighter: getHighlighter,
   },
+  image: {
+    responsiveStyles: true,
+  },
 });

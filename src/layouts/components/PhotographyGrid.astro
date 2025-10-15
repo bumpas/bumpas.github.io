@@ -1,0 +1,94 @@
+---
+import { Picture } from 'astro:assets';
+import 'photoswipe/style.css';
+import { getCollection } from "astro:content";
+const photoEntries = await getCollection("photography");
+
+// The photography collection entries have a `data.photos` array where each
+// photo uses the `image()` schema helper which returns an image module.
+// We need to flatten all entries' photos into one array and normalize each
+// image module to a shape the <Picture> component and PhotoSwipe expect.
+const allPhotos = photoEntries
+  .flatMap((entry) => entry.data?.photos ?? [])
+  .map((p) => {
+    // `p.image` is an imported image module (Astro Image or a string path).
+    const imageModule = p.image ?? p;
+    // Normalize to an object with .src, .width, .height, .alt if available.
+    const normalized = {
+      src: (imageModule && imageModule.src) ? imageModule.src : imageModule,
+      width: imageModule?.width,
+      height: imageModule?.height,
+      alt: p?.alt ?? null,
+      // keep reference to module for Astro <Picture> which accepts modules
+      _module: imageModule,
+    };
+    return normalized;
+  });
+
+const PATTERN = [
+  'col-span-2 row-span-3',
+  'col-span-2 row-span-2',
+  'col-span-1 row-span-3',
+  'col-span-1 row-span-2',
+  'col-span-2 row-span-2',
+  'col-span-1 row-span-2',
+  'col-span-1 row-span-3',
+  'col-span-2 row-span-2',
+];
+---
+<div class="my-12">
+  <div class="grid grid-cols-4 gap-4 bento-grid" id="photography-grid">
+    {allPhotos.map((photo: any, i: number) => {
+      const cls = PATTERN[i % PATTERN.length];
+      const src = photo;
+      const alt = photo?.alt ?? `photo-${i}`;
+      const width = photo.width ?? 1200;
+      const height = photo.height ?? 800;
+      return (
+          <a
+          class={`relative overflow-hidden rounded-lg bg-gray-100 ${cls} block`}
+          href={src.src}
+          data-pswp-width={width}
+          data-pswp-height={height}
+          data-cropped="true"
+          aria-label={`Open image ${i + 1}`}
+        >
+          <Picture 
+            src={src._module ?? src.src ?? src} 
+            alt={alt ?? `photo-${i}`} 
+            loading={i < 4 ? 'eager' : 'lazy'}
+            formats={['avif', 'webp']}
+            width={800} 
+            height={600} 
+            class="w-full h-full object-cover" />
+        </a>
+      )
+    })}
+  </div>
+</div>
+<script>
+  async function init() {
+    const gallery = document.getElementById('photography-grid');
+    if (!gallery) return;
+
+    const { default: PhotoSwipeLightbox } = await import('photoswipe/lightbox');
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery,
+      children: 'a',
+      pswpModule: () => import('photoswipe'),
+      bgOpacity: 0.85,
+      showHideAnimationType: 'fade',
+    });
+
+    lightbox.init();
+  (window as any).__psw = lightbox;
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState !== 'loading') {
+    init();
+  } else {
+    document.addEventListener('DOMContentLoaded', init);
+  }
+</script>

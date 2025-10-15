@@ -31,8 +31,9 @@ const totalPages = Math.ceil(posts.length / settings.pagination);
         <div class="md:col-6 mb-20 md:mb-0">
           {
             banner?.title && (
-              <h1 set:html={markdownify(banner?.title)} class="lg:text-6xl uppercase mb-8" />
-							<a href="/about" class="btn btn-secondary">Learn more</a>
+              <h1 set:html={markdownify(banner?.title)} class="lg:text-6xl uppercase my-8" />
+							<a href="/about" class="btn btn-outline-primary">Learn more</a>
+              <a href="/about#resume" class="btn btn-primary ml-4">Resume</a>
             )
           }
         </div>
@@ -53,6 +54,12 @@ const totalPages = Math.ceil(posts.length / settings.pagination);
     </div>
   </section>
   <!-- /End Banner -->
+	 <section class="bg-stone-700 text-light p-20">
+		<div>
+			<h2 class="text-light">About Me</h2>
+		</div>
+		<div>hello</div>
+	 </section>
 
   <!-- <Cta cta={call_to_action} /> -->
 </Base>

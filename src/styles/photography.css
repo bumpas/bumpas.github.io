@@ -1,0 +1,14 @@
+/* Bento grid helpers */
+.bento-grid {
+  /* Use a custom property to tune the row height if needed */
+  --bento-row: 8rem;
+  grid-auto-rows: var(--bento-row);
+  grid-auto-flow: dense;
+}
+
+/* Improve image layer rendering */
+.bento-grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

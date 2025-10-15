@@ -1,0 +1,60 @@
+---
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { Image } from "astro:assets";
+import social from "@/config/social.json";
+import Social from "@/components/Social.astro";
+import type { CollectionEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
+
+const about = (await getEntry(
+  "about",
+  "-index"
+)) as CollectionEntry<"about">;
+const { banner } = about.data;
+const { Content } = await render(about);
+
+---
+
+<Base
+  title="About">
+  <div class="section">
+    <div class="container">
+      <div class="row justify-center items-center">
+        <div class="md:col-6 mb-8 md:mb-0">
+          <div class="text-center">
+            {
+              banner?.image && (
+                <Image
+                  src={banner?.image}
+                  alt="Profile Picture"
+                  class="mx-auto h-60 w-60 rounded-full object-cover mb-4"
+                  width={300}
+                  height={300}
+                />
+              )
+            }
+            <Social source={social} className="social-icons" />
+          </div>
+        </div>
+        <div class="md:col-6 align-center">
+          {
+            banner?.title && (
+              <h1 set:html={markdownify(banner?.title)} class="lg:text-6xl uppercase mb-8" />
+            )
+          }
+          {
+            banner?.body && (
+              <p set:html={markdownify(banner?.body)} />
+            )
+          }
+        </div>
+      </div>
+      <div class="row justify-center mt-16">
+        <div class="content bg-white md:col-12 md:px-30 md:py-15">
+          <Content />
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>

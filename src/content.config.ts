@@ -1,5 +1,6 @@
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
+import { string } from "astro:schema";
 
 // Homepage Collection schema
 const homepageCollection = defineCollection({
@@ -8,6 +9,28 @@ const homepageCollection = defineCollection({
       .object({
         title: z.string(),
         image: z.string(),
+      })
+      .optional(),
+    call_to_action: z
+      .object({
+        title: z.string(),
+        content: z.string(),
+        image: z.string(),
+        button_label: z.string(),
+        button_link: z.string(),
+      })
+      .optional(),
+  }),
+});
+
+// About Collection schema
+const aboutCollection = defineCollection({
+  schema: z.object({
+    banner: z
+      .object({
+        title: z.string(),
+        image: z.string(),
+        body: z.string(),
       })
       .optional(),
     call_to_action: z
@@ -74,11 +97,26 @@ const pagesCollection = defineCollection({
   }),
 });
 
+// Photography collection schema
+const photoCollection = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/photography" }),
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    photos: z.array(z.object({
+      image: image(),
+      alt: z.string(),
+    })),
+  }),
+});
+
 // Export collections
 export const collections = {
   homepage: homepageCollection,
+  about: aboutCollection,
   posts: postsCollection,
   pages: pagesCollection,
   authors: authorsCollection,
   contact: contactCollection,
+  photography: photoCollection,
 };
