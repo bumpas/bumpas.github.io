@@ -67,28 +67,74 @@ const PATTERN = [
   </div>
 </div>
 <script>
-  async function init() {
-    const gallery = document.getElementById('photography-grid');
-    if (!gallery) return;
+  // Initialize PhotoSwipe lightbox in an idempotent way. This function may be
+  // called on initial load and later during client-side navigations (Astro
+  // partial navigations). We clean up any previous instance to avoid dupes.
+  (function () {
+  let pswInstance: any = null;
+  let observer: MutationObserver | null = null;
 
-    const { default: PhotoSwipeLightbox } = await import('photoswipe/lightbox');
+  async function createLightbox(gallery: HTMLElement) {
+      const { default: PhotoSwipeLightbox } = await import('photoswipe/lightbox');
+      const lb = new PhotoSwipeLightbox({
+        gallery,
+        children: 'a',
+        pswpModule: () => import('photoswipe'),
+        bgOpacity: 0.85,
+        showHideAnimationType: 'fade',
+      });
+      lb.init();
+      return lb;
+    }
 
-    const lightbox = new PhotoSwipeLightbox({
-      gallery,
-      children: 'a',
-      pswpModule: () => import('photoswipe'),
-      bgOpacity: 0.85,
-      showHideAnimationType: 'fade',
-    });
+    async function initOnce() {
+      // If an instance exists, destroy it first
+      try {
+        if (pswInstance && typeof pswInstance.destroy === 'function') {
+          pswInstance.destroy();
+        }
+      } catch (e) {
+        console.warn('Error destroying previous PhotoSwipe instance', e);
+      }
 
-    lightbox.init();
-  (window as any).__psw = lightbox;
-  }
+      const gallery = document.getElementById('photography-grid');
+      if (!gallery) return;
 
-  // Initialize when DOM is ready
-  if (document.readyState !== 'loading') {
-    init();
-  } else {
-    document.addEventListener('DOMContentLoaded', init);
-  }
+      pswInstance = await createLightbox(gallery);
+      (window as any).__psw = pswInstance;
+    }
+
+    // Observe DOM for insertion of the photography grid (useful when Astro
+    // does a client-side nav and the grid node is re-rendered)
+    function observeForGrid() {
+      if (observer) return;
+      observer = new MutationObserver((mutations: MutationRecord[]) => {
+        for (const m of mutations) {
+          for (const node of Array.from(m.addedNodes)) {
+            if (!(node instanceof HTMLElement)) continue;
+            if (node.id === 'photography-grid' || node.querySelector?.('#photography-grid')) {
+              initOnce();
+              return;
+            }
+          }
+        }
+      });
+      observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
+    }
+
+    // Run on initial load (or immediately if already ready)
+    if (document.readyState !== 'loading') {
+      initOnce();
+    } else {
+      document.addEventListener('DOMContentLoaded', initOnce, { once: true });
+    }
+
+    // Re-initialize after client-side navigations. Astro doesn't emit a
+    // universal event, but history/popstate and hashchange are common.
+    window.addEventListener('popstate', () => setTimeout(initOnce, 50));
+    window.addEventListener('hashchange', () => setTimeout(initOnce, 50));
+
+    // Also observe DOM changes for when the grid is inserted.
+    observeForGrid();
+  })();
 </script>
