@@ -1,6 +1,5 @@
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
-import { string } from "astro:schema";
 
 // Homepage Collection schema
 const homepageCollection = defineCollection({
