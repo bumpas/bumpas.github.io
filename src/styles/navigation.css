@@ -6,6 +6,11 @@
   @apply bg-body shadow-[0_12px_48px_12px_rgba(52,46,46,.15)];
 }
 
+/* Offset for anchor links */
+:target {
+  scroll-margin-top: 92px;
+}
+
 /* navbar items */
 .navbar {
   @apply relative flex flex-wrap items-center justify-between;
