@@ -1,5 +1,5 @@
 html {
-  @apply text-base;
+  @apply text-base overflow-x-hidden;
 }
 
 body {
