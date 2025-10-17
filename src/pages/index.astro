@@ -33,7 +33,7 @@ const totalPages = Math.ceil(posts.length / settings.pagination);
             banner?.title && (
               <h1 set:html={markdownify(banner?.title)} class="lg:text-6xl uppercase my-8" />
 							<a href="/about" class="btn btn-outline-primary">Learn more</a>
-              <a href="/about#resume" class="btn btn-primary ml-4">Resume</a>
+              <a href="/about#resume" data-astro-reload class="btn btn-primary ml-4">Resume</a>
             )
           }
         </div>
