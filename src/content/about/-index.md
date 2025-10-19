@@ -62,13 +62,13 @@ Remote / Broomfield, CO
 - Mentored developers, established coding standards, and championed accessibility-first, simple, and collaborative development practices.  
 
 **Manager, Digital Development (Front-End & Design System)**  
-*Sep 2023 – Jun 2024*  
+*Mar 2023 – Apr 2024*  
 - Directed the front-end roadmap, design system evolution, and implementation across Crocs’ SFCC sites.  
 - Built frameworks for reusability and scalability, reducing design-to-development friction.  
 - Fostered strong collaboration between creative, UX, and engineering teams through shared tooling and processes.  
 
 **Sr. Digital Developer, SFCC**  
-*Sep 2021 – Mar 2024*  
+*Sep 2021 – Mar 2023*  
 - Developed and maintained key front-end components and integrations within Salesforce Commerce Cloud (SFCC).  
 - Enhanced site performance, accessibility, and scalability through modernized front-end architecture.  
 - Partnered with global teams to ensure feature parity and consistency across regional platforms.  
