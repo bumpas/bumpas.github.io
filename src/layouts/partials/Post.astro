@@ -1,6 +1,5 @@
 ---
 import config from "@/config/config.json";
-import { getSinglePage } from "@/lib/contentParser.astro";
 import dateFormat from "@/lib/utils/dateFormat";
 import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
@@ -10,7 +9,6 @@ type Props = {
   post: CollectionEntry<"posts">;
 };
 
-const authors = await getSinglePage("authors");
 const { summary_length } = config.settings;
 const { post } = Astro.props;
 ---
@@ -18,16 +16,18 @@ const { post } = Astro.props;
 <div class="grid md:grid-cols-2 gap-6 mb-12 border-b border-border pb-[30px]">
   {
     post.data.image && (
-      <div>
-      <Image
-        class="rounded-sm"
-        src={post.data.image}
-        alt={post.data.title}
-        width={445}
-        height={230}
-        format="webp"
-      />
-      </div>
+      <a
+        href={`/posts/${post.id}`}
+      >
+        <Image
+          class="rounded-sm"
+          src={post.data.image}
+          alt={post.data.title}
+          width={445}
+          height={230}
+          format="webp"
+        />
+      </a>
     )
   }
   <div>
@@ -40,24 +40,6 @@ const { post } = Astro.props;
       </a>
     </h3>
     <ul class="mb-4 mt-1.5 flex flex-wrap items-center space-x-3 text-text-light text-sm">
-      <li>
-        {
-          authors
-            .filter((author) =>
-              post.data.authors
-                .map((author) => slugify(author))
-                .includes(slugify(author.data.title))
-            )
-            .map((author) => (
-              <a
-                href={`/authors/${slugify(author.data.title)}`}
-                class="flex items-center hover:text-primary hover:underline"
-              >
-                <span>{author.data.title}</span>
-              </a>
-            ))
-        }
-      </li>
       <li>{dateFormat(post.data.date!)}</li>
       <li>
         <ul>
@@ -79,7 +61,7 @@ const { post } = Astro.props;
     {
       post.body && (
         <p class="text-text">
-          {plainify(post.body?.slice(0, Number(summary_length)))}
+          {plainify(post.body?.slice(0, Number(summary_length)))}&hellip;
         </p>
       )
     }

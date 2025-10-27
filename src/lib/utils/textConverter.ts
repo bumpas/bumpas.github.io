@@ -34,7 +34,8 @@ export const plainify = (content: string) => {
   const filterBrackets = content.replace(/<\/?[^>]+(>|$)/gm, "");
   const filterSpaces = filterBrackets.replace(/[\r\n]\s*[\r\n]/gm, "");
   const stripHTML = htmlEntityDecoder(filterSpaces);
-  return stripHTML;
+  const removeImports = stripHTML.replace(/import\s+.*?;/g, "");
+  return removeImports;
 };
 
 // strip entities for plainify
