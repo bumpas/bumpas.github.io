@@ -99,14 +99,17 @@ const pagesCollection = defineCollection({
 // Photography collection schema
 const photoCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/photography" }),
-  schema: ({ image }) => z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    photos: z.array(z.object({
-      image: image(),
-      alt: z.string(),
-    })),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string().optional(),
+      photos: z.array(
+        z.object({
+          image: image(),
+          alt: z.string(),
+        }),
+      ),
+    }),
 });
 
 // Export collections

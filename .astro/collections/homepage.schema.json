@@ -14,10 +14,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "title",
-            "image"
-          ],
+          "required": ["title", "image"],
           "additionalProperties": false
         },
         "call_to_action": {

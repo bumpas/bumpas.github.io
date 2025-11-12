@@ -37,27 +37,21 @@
           "items": {
             "type": "string"
           },
-          "default": [
-            "admin"
-          ]
+          "default": ["admin"]
         },
         "categories": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "others"
-          ]
+          "default": ["others"]
         },
         "tags": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": [
-            "others"
-          ]
+          "default": ["others"]
         },
         "draft": {
           "type": "boolean"
@@ -66,10 +60,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "title",
-        "date"
-      ],
+      "required": ["title", "date"],
       "additionalProperties": false
     }
   },

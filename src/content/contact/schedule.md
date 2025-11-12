@@ -14,4 +14,3 @@ You can easily schedule a short meeting through my Google Calendar widget
 - CMS integrations (like Contentstack, Sanity, or headless WordPress)
 - Freelance or contract opportunities
 - UX, design, and accessibility best practices
-
