@@ -22,7 +22,10 @@
                 "type": "string"
               }
             },
-            "required": ["image", "alt"],
+            "required": [
+              "image",
+              "alt"
+            ],
             "additionalProperties": false
           }
         },
@@ -30,7 +33,10 @@
           "type": "string"
         }
       },
-      "required": ["title", "photos"],
+      "required": [
+        "title",
+        "photos"
+      ],
       "additionalProperties": false
     }
   },

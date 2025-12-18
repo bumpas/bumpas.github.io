@@ -20,7 +20,10 @@
           "type": "string"
         }
       },
-      "required": ["title", "content"],
+      "required": [
+        "title",
+        "content"
+      ],
       "additionalProperties": false
     }
   },
