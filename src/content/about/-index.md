@@ -2,7 +2,7 @@
 banner:
   title: "About"
   image: "/images/profile-pic.jpg"
-  body: "I’m a Senior Front-End Engineer passionate about building accessible, scalable, and beautifully designed digital experiences. I love the challenge of bridging design and development to create thoughtful, user-focused solutions.
+  body: "I’m a Senior Frontend Engineer passionate about building accessible, scalable, and beautifully designed digital experiences. I love the challenge of bridging design and development to create thoughtful, user-focused solutions.
   
   When I’m away from the screen, you’ll find me learning to play hockey, fly fishing, mountain biking, or behind a camera capturing the outdoors. I’m happiest exploring with my family — finding balance between creativity, code, and a bit of adventure."
 ---
@@ -11,41 +11,28 @@ banner:
 
 ---
 
-### Senior Front-End Engineer
+<h3 className='mb-0'>Senior Frontend Engineer</h3>
 
-Remote / Colorado  
-📧 bumpas@andrewbumpas.com | 📞 970.819.4888
+Remote / Colorado | 📧 bumpas@andrewbumpas.com | 📞 970.819.4888
 
 ---
 
 ### Professional Summary
-
-I’m passionate about advancing the web and embracing emerging technologies to create better, more accessible digital experiences. I’m always learning and refining my skills to stay ahead in an ever-evolving field. Collaboration is at the heart of my work — I love bridging the gap between design and front-end engineering to bring ideas to life.
-
-As a seasoned front-end engineer with over 15 years of ecommerce and digital development experience, I specialize in building scalable design systems, improving processes, and solving complex problems with empathy for both users and teammates. Known for mentoring developers, fostering cross-functional collaboration, and delivering performant, accessible experiences, I’m driven to create digital products that are as inclusive as they are beautiful.
+Senior frontend engineer and design systems leader with over 15 years of experience building and scaling global ecommerce platforms. I bring a strong balance of hands-on frontend engineering and technical leadership, specializing in design systems, accessibility, and performance. Passionate about mentoring developers, improving processes, and partnering closely with design and product teams to create intuitive, inclusive digital experiences.
 
 ---
+
+### Areas of Expertise
+Frontend Architecture | Design Systems | Accessibility | Performance Optimization | CMS and Ecommerce Integration | SEO and Experimentation | UX/UI Principles | Process Improvement | Communication and Collaboration | Empathy-driven Leadership & Mentoring
+
+--- 
 
 ### Technical Skills
-
-**Front-End Development:** HTML, CSS, SASS, JavaScript (ES6+), React, Node.js, npm, REST APIs  
-**Ecommerce Platforms:** Salesforce Commerce Cloud (SFCC / Demandware), Contentstack CMS  
-**Design Systems & UX:** Style Dictionary, Storybook, Figma, Adobe Creative Suite, Wireframing, Prototyping  
-**Best Practices:** A11y (WCAG), i18n, Web Performance, SEO Optimization, Modern Design Patterns  
-**Collaboration & Tools:** Git, Bitbucket, Jira, Confluence, Figjam, Miro, Slack, Agile Workflows, CI/CD Pipelines, Webpack, ESLint, Prettier
-
----
-
-### Core Strengths
-
-- 15+ years of front-end development and ecommerce experience across enterprise and startup environments
-- Expertise in front-end architecture, CMS integration (Contentstack), performance optimization, and design system implementation
-- Strong advocate for accessibility, maintainable code, and collaborative product development
-- Deep understanding of web best practices and modern design patterns
-- Skilled in cross-functional collaboration and creative problem-solving
-- Strong attention to detail and organizational skills
-- Adaptable in fast-paced, evolving environments
-- Empathy-driven leadership and mentoring
+- **Frontend**: HTML, CSS, SASS, JavaScript (ES6+), React, Node.js, npm, REST APIs
+- **Ecommerce and CMS**: Salesforce Commerce Cloud (SFCC), Shopify, WordPress, Contentstack
+- **Design Systems and UX**: Storybook, Style Dictionary, Figma, Adobe Creative Suite, Optimizely
+- **Best Practices**: Accessibility (WCAG), Internationalization (i18n), Web Performance, SEO
+- **Tools**: Git, Jira, Confluence, CI/CD, Webpack, ESLint, Prettier, Google Analytics, AI Assisted Development
 
 ---
 
@@ -53,104 +40,54 @@ As a seasoned front-end engineer with over 15 years of ecommerce and digital dev
 
 <h4 className='mb-0'>Crocs, Inc.</h4>
 
-Remote / Broomfield, CO
+Remote / Broomfield, CO (April 2020 - September 2025)
 
-**Sr. Manager, Digital Development**  
-_Apr 2024 – Sep 2025_
+**Senior Manager, Frontend and Design Systems** | April 2024 - September 2025
+ - Led frontend engineering and design system strategy across global ecommerce storefronts, supporting multiple regions and brands.
+ - Built and scaled the **Okra design system**, partnering with UX and product to improve UI consistency, accessibility compliance, and development velocity across teams.
+ - Established frontend standards and best practices focused on performance, accessibility (WCAG), and maintainability.
+ - Mentored and coached frontend engineers through code reviews, architectural guidance, and career development.
+ - Remained hands-on in frontend architecture, design system contributions, and technical decision-making.
 
-- Led front-end engineering and design system initiatives across Crocs’ global ecommerce platform.
-- Oversaw front-end architecture and performance optimization spanning multiple regional storefronts.
-- Partnered with UX and product teams to deliver a unified design system that improved consistency and developer efficiency.
-- Mentored developers, established coding standards, and championed accessibility-first, simple, and collaborative development practices.
+**Manager, Digital Development** | March 2023 - April 2024
+- Owned the frontend roadmap and evolution of the design system across Salesforce Commerce Cloud storefronts.
+- Designed and delivered reusable frontend frameworks that reduced design-to-development friction and improved cross-team collaboration.
+- Partnered closely with UX, product, and QA to align technical solutions with user experience and business goals.
+- Helped scale frontend practices across distributed teams while maintaining code quality and consistency.
 
-**Manager, Digital Development (Front-End & Design System)**  
-_Mar 2023 – Apr 2024_
+**Senior Digital Developer, SFCC** | September 2021 - March 2023
+- Developed and maintained core frontend components within Salesforce Commerce Cloud, supporting high-traffic global ecommerce sites.
+- Improved frontend performance, scalability, and accessibility through component refactors and architectural enhancements.
+- Collaborated with global teams to ensure consistent UI patterns and localized experiences across regions.
 
-- Directed the front-end roadmap, design system evolution, and implementation across Crocs’ SFCC sites.
-- Built frameworks for reusability and scalability, reducing design-to-development friction.
-- Fostered strong collaboration between creative, UX, and engineering teams through shared tooling and processes.
-
-**Sr. Digital Developer, SFCC**  
-_Sep 2021 – Mar 2023_
-
-- Developed and maintained key front-end components and integrations within Salesforce Commerce Cloud (SFCC).
-- Enhanced site performance, accessibility, and scalability through modernized front-end architecture.
-- Partnered with global teams to ensure feature parity and consistency across regional platforms.
-
-**Digital Developer, SFCC**  
-_Apr 2020 – Sep 2021_
-
-- Contributed to Crocs’ Salesforce Commerce Cloud (SFCC) platform, focusing on front-end development and component architecture.
-- Implemented new features, product detail page improvements, and responsive layouts across global sites.
-- Collaborated with designers and back-end engineers to ensure seamless integration of content, commerce, and brand storytelling.
-- Supported migration efforts and platform enhancements to improve performance and maintainability.
-
----
+**Digital Developer, SFCC** | April 2020 - September 2021
+- Implemented new frontend features, responsive layouts, and PDP enhancements across global ecommerce sites.
+- Supported platform migrations and frontend architecture improvements within SFCC.
+- Worked closely with designers and backend developers to deliver performant, accessible user experiences.
 
 <h4 className='mb-0'>Otter Products</h4>
 
-Fort Collins, CO
+Fort Collins, CO (March 2009 - April 2020)
 
-**Web Developer**  
-_Oct 2017 – Apr 2020_
+**Web Developer** | October 2017 - April 2020
+- Built and maintained high-traffic ecommerce experiences and reusable frontend components across OtterBox and LifeProof platforms.
+- Partnered closely with UX, design, and marketing teams to deliver accessible, conversion-focused user experiences.
+- Contributed to frontend architecture improvements that increased maintainability and performance across the ecommerce stack.
+- Supported experimentation and optimization efforts to improve engagement and conversion.
 
-- Developed and maintained high-traffic ecommerce experiences for OtterBox and LifeProof brands, ensuring consistency and performance across global sites.
-- Built and maintained reusable pattern libraries and front-end components to improve scalability, maintainability, and design consistency.
-- Collaborated with UX, design, and marketing teams to deliver engaging, conversion-focused digital experiences aligned with brand and accessibility standards.
-- Optimized site performance and implemented accessibility improvements using modern web best practices (HTML5, CSS3/SASS, JavaScript).
+**Frontend Developer / UX Designer** | March 2013 - November 2015
+- Served as a hybrid frontend engineer and UX/UI designer across OtterBox and LifeProof ecommerce platforms.
+- Led development of a pattern library that improved UI consistency and accelerated design-to-development workflows.
+- Created wireframes, prototypes, and high-fidelity designs, translating them into accessible, performant frontend implementations.
+- Designed and implemented A/B tests to evaluate UX improvements and increase user engagement and conversion.
+- Acted as a bridge between design, engineering, and marketing, strengthening cross-functional collaboration.
 
-**Front-End Developer**  
-_Aug 2014 – Nov 2015_
-
-- Spearheaded pattern library development for OtterBox.com and LifeProof.com, promoting reusability and maintainability.
-- Developed clean, semantic code for Demandware (SFCC) ecommerce sites with a focus on scalability and performance.
-- Advocated for front-end best practices and supported the integration of new UX patterns.
-
-**UX/UI Designer**  
-_Mar 2013 – Nov 2015_
-
-- Led UX and UI strategy for OtterBox.com, optimizing user experience and conversion.
-- Created wireframes, prototypes, and process flows to refine user journeys.
-- Designed, implemented, and analyzed A/B and multivariate tests to optimize user engagement and conversion performance.
-
-**Web Designer / Content Specialist**  
-_Mar 2009 – Mar 2013_
-
+**Web Designer / Content Specialist** | March 2009 - March 2013
 - Developed responsive homepages, landing pages, and marketing experiences with a focus on performance, accessibility, and brand consistency.
 - Managed and updated product content on the Demandware (SFCC) platform, ensuring accuracy and timely campaign execution.
 - Collaborated cross-functionally with marketing, design, and development teams to plan and launch seasonal and promotional campaigns.
 
 ---
 
-<h4 className='mb-0'>Steamboat Pilot & Today</h4>
-
-Steamboat Springs, CO
-
-**Composing Artist**  
-_Dec 2005 – Feb 2009_
-
-- Created print graphics for nightly news publications in collaboration with editorial and marketing teams, ensuring accuracy and visual impact.
-
----
-
-<h4 className="mb-0">Mountain Resorts</h4>
-
-Steamboat Springs, CO
-
-**Creative Assistant Web Developer**  
-_Nov 2006 – May 2007_
-
-- Assisted in redesigning company web pages using XHTML, CSS, and JavaScript.
-- Designed and implemented Flash slideshows and banners to improve site interactivity and engagement.
-- Captured product photography for rental listings and property marketing.
-
----
-
 ### Education
-
-**Associate of Science in Digital Media**  
-Full Sail University — Winter Park, FL
-
----
-
-_References available upon request._
+Associate of Science, Digital Media — Full Sail University, Winter Park, FL

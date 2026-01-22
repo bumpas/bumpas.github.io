@@ -85,3 +85,46 @@ After finishing all the customization, you can create a production build by runn
 ```
 npm run build
 ```
+
+## 📄 Resume (ATS) PDF generation
+
+This repo includes an ATS-friendly resume generator. The ATS version avoids special glyphs and complex layouts so parsers can read it reliably.
+
+Output location:
+
+- `Andrew-Bumpas-Resume-ATS.pdf`
+
+Generate the PDF:
+
+```
+python3 scripts/generate_resume_pdf.py
+```
+
+Or via npm:
+
+```
+npm run resume
+```
+
+Optional (first time): install the ReportLab dependency if not already present.
+
+```
+python3 -m pip install --user reportlab
+```
+
+You can control the source and starting line (1-based) via CLI or environment variables:
+
+```
+# CLI flags
+python3 scripts/generate_resume_pdf.py \
+  --source /absolute/path/to/-index.md \
+  --start-line 14 \
+  --header "ANDREW BUMPAS"
+
+# Or with environment variables
+ATS_SOURCE_MD=/absolute/path/to/-index.md ATS_START_LINE=14 ATS_HEADER="ANDREW BUMPAS" \
+  python3 scripts/generate_resume_pdf.py
+```
+
+By default, the generator reads from the About page:
+`src/content/about/-index.md` starting at line 14.
