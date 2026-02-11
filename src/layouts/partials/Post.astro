@@ -41,6 +41,7 @@ const { post } = Astro.props;
     </h3>
     <ul class="mb-4 mt-1.5 flex flex-wrap items-center space-x-2 text-text-light text-sm">
       <li>{dateFormat(post.data.date!)}</li>
+      <li aria-hidden="true"><span>•</span></li>
       <li>
         <ul>
           {
