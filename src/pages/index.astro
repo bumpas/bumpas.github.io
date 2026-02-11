@@ -3,9 +3,10 @@ import { settings } from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import Cta from "@/layouts/components/Cta.astro";
 import Pagination from "@/layouts/components/Pagination.astro";
-import Post from "@/layouts/partials/Post.astro";
+import PortfolioGrid from "@/layouts/components/PortfolioGrid.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
+import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { markdownify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
@@ -19,6 +20,9 @@ const { banner, call_to_action } = homepage.data;
 const posts = await getSinglePage("posts");
 const sortPostByDate = sortByDate(posts);
 const totalPages = Math.ceil(posts.length / settings.pagination);
+const portfolioPosts = sortByDate(
+  taxonomyFilter(posts, "categories", "portfolio")
+).slice(0, 3);
 ---
 
 <Base>
@@ -54,7 +58,29 @@ const totalPages = Math.ceil(posts.length / settings.pagination);
     </div>
   </section>
   <!-- /End Banner -->
-	 <section class="bg-stone-700 text-light py-20">
+
+  <!-- <Cta cta={call_to_action} /> -->
+  
+  <!-- Portfolio Posts -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto lg:col-10">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="mb-0">Portfolio</h2>
+            <a href="/categories/portfolio" class="text-primary hover:underline">View all</a>
+          </div>
+          {portfolioPosts.length === 0 ? (
+            <p class="text-text">No portfolio posts yet.</p>
+          ) : (
+            <PortfolioGrid posts={portfolioPosts} />
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-stone-700 text-light py-20">
 		<div class="container">
 			<h2 class="text-light">Things I like.</h2>
 		  <ul>
@@ -71,6 +97,4 @@ const totalPages = Math.ceil(posts.length / settings.pagination);
       </ul>
     </div>
 	 </section>
-
-  <!-- <Cta cta={call_to_action} /> -->
 </Base>
