@@ -1,0 +1,66 @@
+---
+import config from "@/config/config.json";
+import dateFormat from "@/lib/utils/dateFormat";
+import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  posts: CollectionEntry<"posts">[];
+}
+const { posts } = Astro.props as Props;
+const { summary_length } = config.settings;
+---
+
+<div class="grid gap-6 md:grid-cols-3">
+  {posts.map((post) => (
+    <article class="group rounded-lg overflow-hidden border border-border bg-white shadow-sm hover:shadow-md transition dark:bg-transparent">
+      {post.data.image && (
+        <a href={`/posts/${post.id}`} class="block">
+          <Image
+            class="w-full h-auto"
+            src={post.data.image}
+            alt={post.data.title}
+            width={480}
+            height={270}
+            format="webp"
+          />
+        </a>
+      )}
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">
+          <a href={`/posts/${post.id}`} class="text-primary hover:underline">
+            {post.data.title}
+          </a>
+        </h3>
+        <div class="mt-2 text-sm text-text-light flex flex-wrap items-center gap-x-2">
+          <span>{dateFormat(post.data.date!)}</span>
+          <span aria-hidden="true">•</span>
+          <ul class="flex flex-wrap gap-2">
+            {post.data.categories.map((category) => (
+              <li>
+                <a
+                  href={`/categories/${slugify(category)}`}
+                  class="hover:text-primary hover:underline"
+                >
+                  {humanize(category)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {post.body && (
+          <p class="mt-3 text-text">
+            {plainify(post.body?.slice(0, Number(summary_length)))}&hellip;
+          </p>
+        )}
+        <a
+          class="mt-4 inline-block border-b border-primary py-1 text-[15px] leading-[22px] text-primary"
+          href={`/posts/${post.id}`}
+        >
+          Read More
+        </a>
+      </div>
+    </article>
+  ))}
+</div>
